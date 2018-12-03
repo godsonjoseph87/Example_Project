@@ -23,33 +23,13 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title></title>
     </head>
-    <body class="body1">  
-        
-        
-        
-       
-        
+    <body class="body1">   
         <div class="container">
   <div class="row">
     <div class="col-sm-2">
      </div>
     <div class="col-sm-8">
-     
-            
-   
-    
-        
-            
-       
-        
-       
-        
-        
-        
-            <div class="centered"><center> <img src="assets/images/tick.png" height="150px" width="150px" ></center><span class="blinking">UPDATION SUCCESSFUL!</span></div>
-       
-        
-       
+            <div class="centered"><center> <img src="assets/images/tick.png" height="150px" width="150px" ></center><span class="blinking">UPDATION SUCCESSFUL!</span></div>     
  </div>
         <?php
         session_start();
