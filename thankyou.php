@@ -69,7 +69,7 @@ $addr=$_POST['txtaddr'];
 if($name !=''||$email !='')
     {
 
-$query = mysql_query("insert into custmr1(name,phone,email,address) values ('$name',$phn, '$email','$addr')");
+ mysqli_query($con,"insert into custmr1(name,phone,email,address) values ('$name',$phn, '$email','$addr')");
 
 }
 else{

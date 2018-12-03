@@ -34,7 +34,7 @@
          <?php
         include_once 'connection.php';
         $query="select * from custmr1";
-        $result=mysql_query($query);
+        $result=mysqli_query($con,$query);
         ?>
         
         <table align="center" width="90%">
@@ -50,7 +50,7 @@
             </tr>
       
         <?php
-        while($row=mysql_fetch_assoc($result))
+        while($row= mysqli_fetch_assoc($result))
         {
             ?>
             <tr>

@@ -19,7 +19,7 @@ if(isset($_GET['del']))
     $id=$_GET['del'];
     echo $id;
     $sql="delete from custmr1 where id='$id'";
-    $res=mysql_query($sql) or die("Failed".mysql_error());
+    $res= mysqli_query($con,$sql) or die("Failed".mysqli_error());
     echo "<meta http-equiv='refresh' content='0;url=view.php'>";
 }
 

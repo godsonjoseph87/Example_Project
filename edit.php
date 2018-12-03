@@ -74,8 +74,8 @@ and open the template in the editor.
     $id=$_GET['edit'];
     echo $id;
     $sql="select * from custmr1 where id='$id'";
-    $res=mysql_query($sql) or die("Failed".mysql_error());
-    $row=mysql_fetch_assoc($res);
+    $res=mysqli_query($con,$sql) or die("Failed".mysqli_error());
+    $row=mysqli_fetch_assoc($res);
     session_start();
     $_SESSION['id'] = $id;
 }
