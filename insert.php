@@ -26,7 +26,7 @@ and open the template in the editor.
     
     <body>
         
-        <form method = "post" action = "thankyou.php" id="insertform">
+        <form method = "post" action = "thankyou.php" id="insertform" enctype="multipart/form-data">
         
         
         
@@ -83,6 +83,18 @@ and open the template in the editor.
                   
                      
                      <tr>
+                         
+                         
+                          <tr>
+                       
+                         <td><center>
+                             <input name = "fileupld" type = "file" 
+                                    id = "fileupld" class="form-control" placeholder="Upload Image" value="Upload"/></td>
+                     </center>
+                  
+                     
+                     <tr>
+                         
                         
                          <td><center>
 <!--                             <button class="button">SUBMIT</button>-->

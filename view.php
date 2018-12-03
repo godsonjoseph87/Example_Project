@@ -28,9 +28,6 @@
         <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      
-        
-        
          <?php
         include_once 'connection.php';
         $query="select * from custmr1";
@@ -40,11 +37,13 @@
         <table align="center" width="90%">
             
             <tr>
+                <th>Image</th>
             <th>ID</th>
                 <th>Name</th>
                 <th>Phone</th>
                 <th>Email ID</th>
                  <th>Address</th>
+                 
                  <th class="clr">Delete</th>
                  <th>Edit</th>
             </tr>
@@ -52,8 +51,12 @@
         <?php
         while($row= mysqli_fetch_assoc($result))
         {
+            
             ?>
             <tr>
+                 <td class="hover1">
+                 <img src="assets/images/profile_picture/<?php echo $row['image']; ?>" width="120px" height="100px"> 
+            </td>
                 <td contenteditable="true" class="hover">
                     <?php echo $row['id']; ?> 
             </td>
@@ -70,11 +73,13 @@
                     <?php echo $row['address']; ?> 
             </td>
             
+            
             <td><center><a href="delete.php?del=<?php echo $row['id'];?>" class="button4">DELETE</a></center></td>
         <td class="hover1"><center><a href="edit.php?edit=<?php echo $row['id'];?>" class="button">EDIT</a></center></td>
             </tr>
             <?php
         }
+        mysqli_close($con);
         ?>
             
             

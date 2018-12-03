@@ -13,16 +13,46 @@
 echo "hello";
 include_once 'connection.php';
 
+ 
+
+
 if(isset($_GET['del']))
 {
     echo "hai";
     $id=$_GET['del'];
     echo $id;
+    $query="select * from custmr1 where id='$id'";
+ $result=mysqli_query($con,$query);
+ $row= mysqli_fetch_assoc($result);
+ 
+
+ 
+ 
+ 
+ $image="assets/images/profile_picture/".$row['image'];
+ echo $image;
+
+ 
+    unlink($image);
+    
     $sql="delete from custmr1 where id='$id'";
     $res= mysqli_query($con,$sql) or die("Failed".mysqli_error());
     echo "<meta http-equiv='refresh' content='0;url=view.php'>";
+    
+       
+    
+    
+    
+    
 }
 
+
+
+
+
+
+
+mysqli_close($con);
 ?>
     </form>
         

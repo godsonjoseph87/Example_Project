@@ -80,7 +80,7 @@ and open the template in the editor.
     $_SESSION['id'] = $id;
 }
 
-
+mysqli_close($con);
 ?>
     <div class="centered1">
         <table class="table1">
