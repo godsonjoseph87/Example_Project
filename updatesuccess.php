@@ -52,7 +52,7 @@ $addr=$_POST['txtaddr'];
 
 $query = mysql_query("update custmr1 set name='$name', phone=$phn ,email='$email',address= '$addr' where id=$id");
 
-
+session_abort();
 
 
 ?>
